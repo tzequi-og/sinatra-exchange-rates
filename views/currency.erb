@@ -1,0 +1,17 @@
+<!-- homepage.erb -->
+
+<h1>Convert <%= @currency %></h1>
+
+<div>
+  Go <a href="/">back</a>.
+</div>
+
+<div>
+  <ul>
+    <% @currencies.each do |currency_to| %>
+      <li>
+        <a href="/<%= @currency_from %>/<%= currency_to.to_s %>">Convert 1 <%= @currency_from %> to <%= currency_to %>...</a>
+      </li>
+    <% end %>
+  </ul>
+</div>
