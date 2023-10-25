@@ -1,0 +1,13 @@
+<!-- homepage.erb -->
+
+<h1>Currency pairs</h1>
+
+<div>
+  <ul>
+    <% @currencies.each do |currency| %>
+      <li>
+        <a href="/<%= currency.to_s %>">Convert <%= currency %> to...</a>
+      </li>
+    <% end %>
+  </ul>
+</div>
